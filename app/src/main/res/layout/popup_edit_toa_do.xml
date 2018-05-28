@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/tvEditToaDo"
+        android:editable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapEditToaDo"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnLuuEditToaDo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lưu"/>
+        <Button
+            android:id="@+id/btnThoatEditToaDo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thoát"/>
+
+    </LinearLayout>
+</LinearLayout>

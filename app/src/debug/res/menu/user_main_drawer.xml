@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ca_nhan"
+            android:icon="@drawable/ic_menu_ca_nhan"
+            android:title="Cá Nhân" />
+    </group>
+
+    <item android:title="Cài Đặt">
+        <menu>
+            <item
+                android:id="@+id/nav_thong_tin"
+                android:icon="@drawable/ic_menu_giup_do"
+                android:title="Thông Tin" />
+            <item
+                android:id="@+id/nav_dang_xuat"
+                android:icon="@drawable/ic_menu_dang_xuat"
+                android:title="Đăng Xuất" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Tìm kiếm Trạm"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="collapseActionView|always" />
+    <item
+        android:id="@+id/action_normal"
+        android:orderInCategory="100"
+        android:title="Normal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_satellite"
+        android:orderInCategory="100"
+        android:title="Satellite"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_hybrid"
+        android:orderInCategory="100"
+        android:title="Hybrid"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_terrain"
+        android:orderInCategory="100"
+        android:title="Terrain"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+    <data>
+        <variable name="nhatKy" type="com.example.lequa.btsmanagement.model.NhatKy"/>
+        <variable name="user" type="com.example.lequa.btsmanagement.model.UserBTS"/>
+        <variable name="tram" type="com.example.lequa.btsmanagement.model.Tram"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/tvTenTaiKhoan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:text="Chi tiết sự cố" />
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold|italic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{nhatKy.tieuDe}"
+                tool:text="Sự cố mất điện ở trạm bts đô đốc bảo"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{tram.tenTram}"
+                    tool:text="Trạm BTS Đô Đốc Bảo"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - "/>
+                <TextView
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{user.ten}"
+                    tool:text="Lê Quang Tam"/>
+            </LinearLayout>
+            <TextView
+                android:textSize="12dp"
+                android:textStyle="italic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{com.example.lequa.btsmanagement.ui.dsnhatky.DSNhatKyFragment.getDate(nhatKy.thoiGian)}"
+                tool:text="10:30 22/1/2015"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="3dp"
+                android:background="#000000"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{nhatKy.noiDung}"
+                tool:text="Đầu tiên, bạn cần phải đi xuống dưới lấy 1 cây xà ben, sau đó dùng xà ben đề quay trục nó, vì trục nó rất cứng"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
+

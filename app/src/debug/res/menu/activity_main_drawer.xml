@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ca_nhan"
+            android:icon="@drawable/ic_menu_ca_nhan"
+            android:title="Cá Nhân" />
+        <item
+            android:id="@+id/nav_tai_khoan"
+            android:icon="@drawable/ic_menu_tai_khoan"
+            android:title="Tài Khoản" />
+        <item
+            android:id="@+id/nav_tram"
+            android:icon="@drawable/ic_menu_tram"
+            android:title="Trạm" />
+        <item
+            android:id="@+id/nav_nha_mang"
+            android:icon="@drawable/ic_menu_nha_mang"
+            android:title="Nhà Mạng" />
+    </group>
+
+    <item android:title="Tình Hình">
+        <menu>
+            <item
+                android:id="@+id/nav_bao_cao"
+                android:icon="@drawable/ic_menu_bao_cao"
+                android:title="Báo Cáo" />
+            <!--<item-->
+                <!--android:id="@+id/nav_mat_dien"-->
+                <!--android:icon="@drawable/ic_menu_mat_dien"-->
+                <!--android:title="Mất Điện" />-->
+        </menu>
+    </item>
+    <item android:title="Công Cụ">
+        <menu>
+            <item
+                android:id="@+id/nav_thong_tin"
+                android:icon="@drawable/ic_menu_giup_do"
+                android:title="Thông Tin" />
+            <item
+                android:id="@+id/nav_dang_xuat"
+                android:icon="@drawable/ic_menu_dang_xuat"
+                android:title="Đăng Xuất" />
+        </menu>
+    </item>
+
+</menu>

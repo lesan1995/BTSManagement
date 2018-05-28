@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.map.MainFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/fragment_maps" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_them_tram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="6dp"
+        android:src="@drawable/ic_add"
+        android:alpha="0.6"
+        app:backgroundTint="#ffffff"
+        app:fabSize="normal" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_chi_tiet_tram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_fab_chi_tiet_tram"
+        android:visibility="invisible"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_nhat_ky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:src="@drawable/ic_fab_nhat_ky"
+        android:visibility="invisible"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mat_dien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="112dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:src="@drawable/ic_mat_dien_white"
+        android:visibility="invisible"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_hinh_anh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:src="@drawable/ic_fab_hinh_anh"
+        android:visibility="invisible"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini" />
+
+</android.support.design.widget.CoordinatorLayout>

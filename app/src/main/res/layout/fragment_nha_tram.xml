@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="tram" type="com.example.lequa.btsmanagement.model.Tram"/>
+        <variable name="nhaTram" type="com.example.lequa.btsmanagement.model.NhaTram"/>
+        <variable name="nhaMang" type="com.example.lequa.btsmanagement.model.NhaMang"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarNhaTram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/tvTenTram"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:text="@{tram.tenTram}" />
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_nha_tram_mang"/>
+            <TextView
+                android:id="@+id/tvNhaMang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:text="@{nhaMang.tenNhaMang}"
+                android:textColor="#000000"/>
+            <ImageView
+                android:id="@+id/btnEditNhaMang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_edit"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Cầu cáp" />
+
+            <SeekBar
+                android:id="@+id/sbCauCap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.cauCap}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvCauCap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.cauCap+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Hệ Thống Điện" />
+
+            <SeekBar
+                android:id="@+id/sbHeThongDien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.heThongDien}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvHeThongDien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.heThongDien+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Hàng Rào" />
+
+            <SeekBar
+                android:id="@+id/sbHangRao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.hangRao}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvHangRao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.hangRao+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Điều Hòa" />
+
+            <SeekBar
+                android:id="@+id/sbDieuHoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.dieuHoa}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvDieuHoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.dieuHoa+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Ổn Áp" />
+
+            <SeekBar
+                android:id="@+id/sbOnAp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.onAp}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvOnAp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.onAp+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Cảnh Báo" />
+
+            <SeekBar
+                android:id="@+id/sbCanhBao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.canhBao}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvCanhBao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.canhBao+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Bình Cứu Hóa" />
+
+            <SeekBar
+                android:id="@+id/sbBinhCuuHoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.binhCuuHoa}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvBinhCuuHoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.binhCuuHoa+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Máy Phát Điện" />
+
+            <SeekBar
+                android:id="@+id/sbMayPhatDien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:max="15"
+                android:progress="@{nhaTram.mayPhatDien}"
+                android:enabled="false"
+                />
+            <TextView
+                android:id="@+id/tvMayPhatDien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text='@{nhaTram.mayPhatDien+"/15"}' />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Chung Máy Phát" />
+
+            <RadioGroup
+                android:id="@+id/rgChungMayPhat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/rbCo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="@{nhaTram.chungMayPhat}"
+                    android:text="Có"/>
+                <RadioButton
+                    android:id="@+id/rbKhong"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="@{!nhaTram.chungMayPhat}"
+                    android:text="Không"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
+
